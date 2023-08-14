@@ -24,8 +24,7 @@ class Api:
 
     def __init__(self):
         self.environment = Environment()
-         self.headers = {'User-Agent': self.environment.user_agent, 'Content-type': 'application/json',
-                        'Authorization': 'Token ' + self.environment.api_key}
+         self.headers = {'User-Agent': self.environment.user_agent, 'Content-type': 'application/json','Authorization': 'Token ' + self.environment.api_key}
 
         if self.environment.extra_header_1 and self.environment.extra_header_1_value is not None:
             self.headers.update({self.environment.extra_header_1: self.environment.extra_header_1_value})
