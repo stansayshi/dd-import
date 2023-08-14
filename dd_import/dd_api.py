@@ -32,7 +32,7 @@ class Api:
         if self.environment.extra_header_2 and self.environment.extra_header_2_value is not None:
             self.headers.update({self.environment.extra_header_2: self.environment.extra_header_2_value})
 
-        self.headers_without_json = {'Authorization': 'Token ' + self.environment.api_key}
+        self.headers_without_json = {'User-Agent': self.environment.user_agent, 'Authorization': 'Token ' + self.environment.api_key}
 
         if self.environment.extra_header_1 and self.environment.extra_header_1_value is not None:
             self.headers_without_json.update({self.environment.extra_header_1: self.environment.extra_header_1_value})
